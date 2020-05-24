@@ -20,6 +20,17 @@
     font-display: auto;
 }
 
+@font-face {
+    font-family: 'Muller-Italic';
+    src: local('Muller Regular Italic'), local('Muller-Regular-Italic'),
+        url('../fonts/Muller/MullerRegularItalic.woff2') format('woff2'),
+        url('../fonts/Muller/MullerRegularItalic.woff') format('woff'),
+        url('../fonts/Muller/MullerRegularItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+    font-display: auto;
+}
+
 @mixin reg {
     font-family: 'Muller-Regular', sans-serif;
     font-weight: 300;
@@ -28,4 +39,9 @@
 @mixin bold {
     font-family: 'Muller-Medium', sans-serif;
     font-weight: 700;
+}
+
+@mixin italic {
+    font-family: 'Muller-Italic', sans-serif;
+    font-weight: 400;
 }

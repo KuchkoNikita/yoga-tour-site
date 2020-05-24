@@ -1,1 +1,27 @@
 .causes
+    &__title
+        text-align: center
+        font-size: 36px
+        +bold
+    &__line
+        margin-top: 20px
+    &-list
+        margin-top: 70px
+        display: flex
+        flex-wrap: wrap
+        justify-content: center
+        &__item
+           flex-basis: 33%
+           &:nth-last-child(-n+2)
+               margin-top: 45px
+        &__image
+            margin: 0 auto
+            width: 170px
+            height: 170px
+            border-radius: 50%
+            border: none
+        &__text
+            margin-top: 20px
+            display: block
+            text-align: center
+            font-size: 16px

@@ -14,6 +14,14 @@
   font-display: auto;
 }
 
+@font-face {
+  font-family: 'Muller-Italic';
+  src: local("Muller Regular Italic"), local("Muller-Regular-Italic"), url("../fonts/Muller/MullerRegularItalic.woff2") format("woff2"), url("../fonts/Muller/MullerRegularItalic.woff") format("woff"), url("../fonts/Muller/MullerRegularItalic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+  font-display: auto;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -31,6 +39,7 @@ img {
 
 a {
   text-decoration: none;
+  cursor: pointer;
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -56,10 +65,20 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .button {
+  cursor: pointer;
   border: 2.0px solid;
   background-color: transparent;
   font-family: 'Muller-Medium', sans-serif;
   font-weight: 700;
+}
+
+.section {
+  padding: 80px 0;
+}
+
+.title-line {
+  display: block;
+  margin: 0 auto;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -562,5 +581,473 @@ template {
   margin-left: 21px;
   font-size: 18px;
   text-transform: uppercase;
+}
+
+.causes__title {
+  text-align: center;
+  font-size: 36px;
+  font-family: 'Muller-Medium', sans-serif;
+  font-weight: 700;
+}
+
+.causes__line {
+  margin-top: 20px;
+}
+
+.causes-list {
+  margin-top: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.causes-list__item {
+  -ms-flex-preferred-size: 33%;
+      flex-basis: 33%;
+}
+
+.causes-list__item:nth-last-child(-n+2) {
+  margin-top: 45px;
+}
+
+.causes-list__image {
+  margin: 0 auto;
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  border: none;
+}
+
+.causes-list__text {
+  margin-top: 20px;
+  display: block;
+  text-align: center;
+  font-size: 16px;
+}
+
+.schedule__title {
+  text-align: center;
+  font-size: 36px;
+  font-family: 'Muller-Medium', sans-serif;
+  font-weight: 700;
+}
+
+.schedule__line {
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+.schedule-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.schedule-list__item {
+  display: block;
+  -ms-flex-preferred-size: 24%;
+      flex-basis: 24%;
+  background-color: #f8f2e4;
+  margin-top: 20px;
+}
+
+.schedule-list__days {
+  margin-top: 30px;
+  display: block;
+  text-align: center;
+}
+
+.schedule-list__title {
+  margin-top: 13px;
+  text-align: center;
+}
+
+.schedule-list__more {
+  margin: 18px 0;
+  display: block;
+  text-align: center;
+}
+
+.schedule-list__button {
+  display: block;
+  border-color: #e28234;
+  color: #e28234;
+  padding: 15px 30px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.ayurveda__title {
+  text-align: center;
+  font-size: 36px;
+  font-family: 'Muller-Medium', sans-serif;
+  font-weight: 700;
+}
+
+.ayurveda__line {
+  margin-top: 20px;
+  margin-bottom: 70px;
+}
+
+.ayurveda__text {
+  margin: 0 auto;
+  text-align: center;
+  max-width: 920px;
+  font-size: 18px;
+}
+
+.ayurveda__subtitle {
+  text-align: center;
+  font-family: 'Muller-Medium', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.ayurveda-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.ayurveda-list__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 30px;
+}
+
+.ayurveda-list__image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-right: 40px;
+}
+
+.ayurveda-list__text {
+  font-size: 18px;
+  width: 450px;
+}
+
+.ayurveda-center {
+  margin-top: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.ayurveda-center__images {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.ayurveda-center__item {
+  -ms-flex-preferred-size: 33%;
+      flex-basis: 33%;
+  margin-bottom: 20px;
+}
+
+.ayurveda-center__image {
+  width: 139px;
+  height: 139px;
+}
+
+.ayurveda-text-block {
+  margin-left: 50px;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+}
+
+.ayurveda-text-block__title {
+  margin-bottom: 10px;
+  font-size: 30px;
+  font-family: 'Muller-Medium', sans-serif;
+  font-weight: 700;
+}
+
+.ayurveda-text-block__adress {
+  display: block;
+  color: #4b4b4b;
+  font-size: 14px;
+  margin-bottom: 35px;
+}
+
+.ayurveda-text-block__text {
+  font-size: 12px;
+  margin-bottom: 58px;
+  max-width: 480px;
+}
+
+.ayurveda-text-block__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.ayurveda-text-block__item {
+  margin-bottom: 10px;
+}
+
+.ayurveda-text-block__column {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+}
+
+.ayurveda-text-block__icon {
+  vertical-align: top;
+  display: inline-block;
+}
+
+.ayurveda-text-block__descripton {
+  margin-left: 15px;
+  display: inline-block;
+  width: 200px;
+  font-size: 12px;
+  color: #454545;
+}
+
+.instructors {
+  background-color: #f8f2e4;
+}
+
+.instructors__title {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.instructors__line {
+  margin-bottom: 70px;
+}
+
+.instructors-people-women, .instructors-people-man {
+  position: relative;
+  background-image: url("../img/instructors/women.jpg");
+  width: 940px;
+  height: 540px;
+  margin: 0 auto;
+}
+
+.instructors-people__text {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  min-height: 170px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #444444;
+  opacity: 0.5;
+  color: #ffffff;
+}
+
+.instructors-people__name {
+  font-size: 30px;
+  margin-bottom: 15px;
+  font-family: 'Muller-Medium', sans-serif;
+  font-weight: 700;
+}
+
+.instructors-people__title {
+  width: 30%;
+  max-width: 240px;
+  margin: auto 0;
+  margin-right: 50px;
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
+}
+
+.instructors-people__specialty {
+  font-size: 16px;
+  font-family: 'Muller-Italic', sans-serif;
+  font-weight: 400;
+}
+
+.instructors-people__about {
+  width: 70%;
+  max-width: 520px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 14px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-preferred-size: 70%;
+      flex-basis: 70%;
+}
+
+.instructors-people__about::before {
+  content: ' ';
+  width: 2px;
+  height: 72px;
+  background-color: #fff;
+  float: left;
+  margin-right: 45px;
+}
+
+.instructors-people-man {
+  margin-top: 20px;
+  background-image: url("../img/instructors/man.jpg");
+}
+
+.reviews__title {
+  text-align: center;
+  font-size: 36px;
+  font-family: 'Muller-Medium', sans-serif;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.reviews__line {
+  margin-bottom: 80px;
+}
+
+.reviews-slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.reviews-slider__image {
+  max-width: 150px;
+  max-height: 150px;
+}
+
+.reviews-slider__slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.reviews-slider__title {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.reviews-slider__title-bold {
+  font-family: 'Muller-Medium', sans-serif;
+  font-weight: 700;
+}
+
+.reviews-slider__link {
+  text-decoration: underline;
+  color: #c94410;
+  font-size: 12px;
+}
+
+.reviews-slider__review {
+  margin-top: 17px;
+  width: 640px;
+  font-size: 14px;
+  font-family: 'Muller-Italic', sans-serif;
+  font-weight: 400;
+}
+
+.reviews-slider__text {
+  margin-left: 40px;
+}
+
+.advantages {
+  background-color: #f8f2e4;
+}
+
+.advantages__title {
+  text-align: center;
+  font-family: 'Muller-Medium', sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.advantages__line {
+  margin-bottom: 10px;
+}
+
+.advantages-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.advantages-list__image {
+  display: block;
+  margin: 0 auto;
+}
+
+.advantages-list__item {
+  -ms-flex-preferred-size: 33%;
+      flex-basis: 33%;
+  margin-top: 60px;
+}
+
+.advantages-list__title {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 18px;
+  font-family: 'Muller-Medium', sans-serif;
+  font-weight: 700;
+}
+
+.advantages-list__text {
+  margin-top: 20px;
+  display: block;
+  text-align: center;
+  font-size: 16px;
+}
+
+.work__title {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.work__line {
+  margin-bottom: 40px;
+}
+
+.work__subtitle {
+  display: block;
+  text-align: center;
+  font-size: 18px;
+  font-family: 'Muller-Italic', sans-serif;
+  font-weight: 400;
 }
 /*# sourceMappingURL=style.css.map */
