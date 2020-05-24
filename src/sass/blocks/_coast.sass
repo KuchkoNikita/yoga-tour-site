@@ -1,0 +1,60 @@
+.coast
+    background-color: $bg-color
+    &__title
+        text-align: center
+        font-size: 36px
+        margin-bottom: 30px
+    &__line
+        margin-bottom: 55px
+    &-tours
+        width: 820px
+        margin: 0 auto
+        &__usual
+            padding: 50px
+            background-color: #fff
+        &__item
+            display: flex
+            justify-content: space-between
+            margin-bottom: 20px
+        &__bold
+            +bold
+        &__text
+            font-size: 21px
+        &__coast
+            font-size: 20px
+        &__special
+            display: flex
+            justify-content: space-between
+            background-color: $table-color
+            padding: 25px 50px
+            align-items: center
+        &__sentence
+            font-size: 20px
+            +bold
+        &__button
+            padding: 15px 45px
+            color: $main-color
+            &:hover
+                background-color: $main-color
+                border-color: $main-color 
+                color: $second-text-color
+    &__subtitle
+        text-align: center
+        font-size: 24px
+        +bold
+        margin-top: 50px
+        margin-bottom: 40px
+    &-list
+        &__item
+            width: 680px
+            display: block
+            margin: 0 auto
+            margin-bottom: 6px
+        &__text
+            color: $coast-text-color
+            font-size: 18px
+    &__warning
+        display: block
+        text-align: center
+        font-size: 18px
+        margin-top: 48px

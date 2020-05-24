@@ -687,6 +687,11 @@ template {
   margin-bottom: 20px;
 }
 
+.schedule-list__button:hover {
+  background-color: #e28234;
+  color: #ffffff;
+}
+
 .ayurveda__title {
   text-align: center;
   font-size: 36px;
@@ -1049,5 +1054,153 @@ template {
   font-size: 18px;
   font-family: 'Muller-Italic', sans-serif;
   font-weight: 400;
+}
+
+.work-list {
+  margin-top: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.work-list__arrow {
+  width: 25px;
+  height: 17px;
+  margin: auto 0px;
+  margin-top: 37px;
+}
+
+.work-list__image {
+  display: block;
+  margin: 0 auto;
+}
+
+.work-list__text {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.work-list__link {
+  margin-top: 7px;
+  display: block;
+  text-align: center;
+  text-decoration: underline;
+  color: #ea7231;
+}
+
+.coast {
+  background-color: #f8f2e4;
+}
+
+.coast__title {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+.coast__line {
+  margin-bottom: 55px;
+}
+
+.coast-tours {
+  width: 820px;
+  margin: 0 auto;
+}
+
+.coast-tours__usual {
+  padding: 50px;
+  background-color: #fff;
+}
+
+.coast-tours__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.coast-tours__bold {
+  font-family: 'Muller-Medium', sans-serif;
+  font-weight: 700;
+}
+
+.coast-tours__text {
+  font-size: 21px;
+}
+
+.coast-tours__coast {
+  font-size: 20px;
+}
+
+.coast-tours__special {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #f4e1b6;
+  padding: 25px 50px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.coast-tours__sentence {
+  font-size: 20px;
+  font-family: 'Muller-Medium', sans-serif;
+  font-weight: 700;
+}
+
+.coast-tours__button {
+  padding: 15px 45px;
+  color: #e28234;
+}
+
+.coast-tours__button:hover {
+  background-color: #e28234;
+  border-color: #e28234;
+  color: #ffffff;
+}
+
+.coast__subtitle {
+  text-align: center;
+  font-size: 24px;
+  font-family: 'Muller-Medium', sans-serif;
+  font-weight: 700;
+  margin-top: 50px;
+  margin-bottom: 40px;
+}
+
+.coast-list__item {
+  width: 680px;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 6px;
+}
+
+.coast-list__text {
+  color: #4e4e4e;
+  font-size: 18px;
+}
+
+.coast__warning {
+  display: block;
+  text-align: center;
+  font-size: 18px;
+  margin-top: 48px;
+}
+
+.safety__title {
+  font-size: 36px;
+  font-family: 'Muller-Medium', sans-serif;
+  font-weight: 700;
 }
 /*# sourceMappingURL=style.css.map */
