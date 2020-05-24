@@ -1,0 +1,59 @@
+.contacts
+    background-color: $bg-color
+    padding: 50px 0
+    &__title
+        margin-bottom: 28px
+        font-size: 22px
+        +bold
+    &-list
+        display: flex
+        margin-bottom: 30px
+    &-social
+        margin-right: 135px
+        &__title
+            margin-bottom: 25px
+            display: block
+            font-size: 16px
+            +bold
+        &__list
+            display: flex
+        &__link
+            margin-right: 20px
+            display: flex
+            align-items: center
+            justify-content: center
+            min-width: 40px
+            min-height: 40px
+            border: 1px solid $main-color
+            border-radius: 50%
+    &-phone
+        &__title
+            display: block
+            margin-bottom: 13px
+            font-size: 16px
+            +bold
+        &__desription
+            margin-bottom: 7px
+            display: block
+            font-size: 12px
+            +italic
+        &__phone
+            display: block
+            font-size: 28px
+            +bold
+            color: $text-color
+    &-office
+        &__title
+            font-size: 16px
+            +bold
+        &__list
+            display: flex
+        &__item
+            margin-right: 10px
+        &__text
+            margin-top: 15px
+            display: block
+            font-size: 11px
+            +bold
+            color: $text-color
+        &__image

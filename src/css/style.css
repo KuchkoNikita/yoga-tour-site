@@ -1248,4 +1248,107 @@ template {
   text-align: center;
   margin-top: 12px;
 }
+
+.contacts {
+  background-color: #f8f2e4;
+  padding: 50px 0;
+}
+
+.contacts__title {
+  margin-bottom: 28px;
+  font-size: 22px;
+  font-family: 'Muller-Medium', sans-serif;
+  font-weight: 700;
+}
+
+.contacts-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.contacts-social {
+  margin-right: 135px;
+}
+
+.contacts-social__title {
+  margin-bottom: 25px;
+  display: block;
+  font-size: 16px;
+  font-family: 'Muller-Medium', sans-serif;
+  font-weight: 700;
+}
+
+.contacts-social__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.contacts-social__link {
+  margin-right: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-width: 40px;
+  min-height: 40px;
+  border: 1px solid #e28234;
+  border-radius: 50%;
+}
+
+.contacts-phone__title {
+  display: block;
+  margin-bottom: 13px;
+  font-size: 16px;
+  font-family: 'Muller-Medium', sans-serif;
+  font-weight: 700;
+}
+
+.contacts-phone__desription {
+  margin-bottom: 7px;
+  display: block;
+  font-size: 12px;
+  font-family: 'Muller-Italic', sans-serif;
+  font-weight: 400;
+}
+
+.contacts-phone__phone {
+  display: block;
+  font-size: 28px;
+  font-family: 'Muller-Medium', sans-serif;
+  font-weight: 700;
+  color: #000000;
+}
+
+.contacts-office__title {
+  font-size: 16px;
+  font-family: 'Muller-Medium', sans-serif;
+  font-weight: 700;
+}
+
+.contacts-office__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.contacts-office__item {
+  margin-right: 10px;
+}
+
+.contacts-office__text {
+  margin-top: 15px;
+  display: block;
+  font-size: 11px;
+  font-family: 'Muller-Medium', sans-serif;
+  font-weight: 700;
+  color: #000000;
+}
 /*# sourceMappingURL=style.css.map */
