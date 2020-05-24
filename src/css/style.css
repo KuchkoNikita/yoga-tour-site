@@ -1202,5 +1202,50 @@ template {
   font-size: 36px;
   font-family: 'Muller-Medium', sans-serif;
   font-weight: 700;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.safety__line {
+  margin-bottom: 70px;
+}
+
+.safety__text {
+  display: block;
+  margin: 0 auto;
+  width: 966px;
+  text-align: center;
+  font-size: 16px;
+  font-family: 'Muller-Italic', sans-serif;
+  font-weight: 400;
+  margin-bottom: 60px;
+}
+
+.safety__subtitle {
+  font-size: 24px;
+  font-family: 'Muller-Medium', sans-serif;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.safety-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.safety-list__image {
+  display: block;
+  margin: 0 auto;
+}
+
+.safety-list__text {
+  display: block;
+  text-align: center;
+  margin-top: 12px;
 }
 /*# sourceMappingURL=style.css.map */
