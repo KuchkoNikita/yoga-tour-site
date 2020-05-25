@@ -1,0 +1,57 @@
+.travel
+    background-color: $bg-color
+    position: relative
+    &__title
+        font-size: 36px
+        +bold
+        text-align: center
+        margin-bottom: 20px
+    &__line
+        margin-bottom: 80px
+    &-slider
+        display: flex
+        &__slide
+            position: relative
+            margin: 0 auto
+        &__text
+            font-size: 18px
+        &__block
+            position: absolute
+            top: 40%
+            left: 26%
+        &__text
+            display: block
+            text-align: center
+            width: 460px
+            color: $second-text-color
+        &__text-side
+            display: none
+        &__title
+            font-size: 30px
+            +bold
+            text-transform: uppercase
+            text-align: center
+            color: $second-text-color
+        &__image
+            width: 940px
+            height: 530px
+        &__center
+            display: flex
+            justify-content: center
+        &__right
+            position: absolute
+            right: -35%
+            top: 250px
+        &__left
+            position: absolute
+            left: -35%
+            top: 250px
+        &__image-left
+            height: 480px
+            width: 740px
+        &__image-right
+            height: 480px
+            width: 740px
+        &__image-center
+            height: 530px
+            width: 940px
