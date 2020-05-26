@@ -32,6 +32,14 @@ const slider = (sliderName, slidesName) => {
             slides[prevIndex].querySelector('.travel-slider__image').classList.add('travel-slider__image-left');
             slides[nextIndex].querySelector('.travel-slider__image').classList.add('travel-slider__image-right');
             slides[indexSide].querySelector('.travel-slider__image').classList.add('travel-slider__image-center');
+
+            slides.forEach( (element, index) => {
+                const textBlock = element.querySelector('.travel-slider__block');
+                textBlock.classList.add('travel-slider-hidden');
+                if (index === indexSide) {
+                    element.querySelector('.travel-slider__block').classList.remove('travel-slider-hidden');
+                }
+            });
         } else if (side === 'right') {
             slides[prevIndex].classList.remove('travel-slider__center');
             slides[nextIndex].classList.remove('travel-slider__left');
