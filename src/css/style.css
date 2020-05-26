@@ -1373,6 +1373,17 @@ template {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  margin: 0 auto;
+  max-width: 1910px;
+  overflow-x: hidden;
+}
+
+.travel-slider-hidden {
+  display: none;
 }
 
 .travel-slider__slide {
@@ -1397,10 +1408,6 @@ template {
   color: #ffffff;
 }
 
-.travel-slider__text-side {
-  display: none;
-}
-
 .travel-slider__title {
   font-size: 30px;
   font-family: 'Muller-Medium', sans-serif;
@@ -1410,11 +1417,6 @@ template {
   color: #ffffff;
 }
 
-.travel-slider__image {
-  width: 940px;
-  height: 530px;
-}
-
 .travel-slider__center {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1422,18 +1424,20 @@ template {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  width: 940px;
+  height: 530px;
 }
 
 .travel-slider__right {
+  margin-left: 30px;
   position: absolute;
-  right: -35%;
-  top: 250px;
+  right: -30%;
 }
 
 .travel-slider__left {
+  margin-right: 30px;
   position: absolute;
-  left: -35%;
-  top: 250px;
+  left: -30%;
 }
 
 .travel-slider__image-left {
