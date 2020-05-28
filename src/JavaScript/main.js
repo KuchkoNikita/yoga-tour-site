@@ -1,82 +1,151 @@
 'use strict';
-const slider = (sliderName, slidesName) => {
+const bigSlider = (sliderName, slidesName) => {
     const slider = document.querySelector(sliderName);
     const slides = slider.querySelectorAll(slidesName);
+    let interval;
 
-    const slideSwitch = (slider, side) => {
-        let indexSide;
-        slides.forEach((element, index) => {
-            if (element === slider) {
-                indexSide = index;
-                console.log('indexSide: ', indexSide);
+    const deletingSlideСlasses = () => {
+        slides.forEach((element)=> {
+            element.classList = 'big-slider__slide';
+        });
+    };
+
+    const deletingImageСlasses = () => {
+        slides.forEach((element)=> {
+            element.querySelector('.big-slider__image').classList = 'big-slider__image';
+        });
+    };
+
+    const addSlideСlasses = (prevIndex, nextIndex, nowSide) => {
+        slides[prevIndex].classList.add('big-slider__left');
+        slides[nextIndex].classList.add('big-slider__right');
+        slides[nowSide].classList.add('big-slider__center');
+    };
+
+    const addImageСlasses = (prevIndex, nextIndex, nowSide) => {
+        slides[prevIndex].querySelector('.big-slider__image').classList.add('big-slider__image-left');
+        slides[nextIndex].querySelector('.big-slider__image').classList.add('big-slider__image-right');
+        slides[nowSide].querySelector('.big-slider__image').classList.add('big-slider__image-center');
+    };
+
+    const hideText = (nowIndex) => {
+        slides.forEach( (element, index) => {
+            const textBlock = element.querySelector('.big-slider__block');
+            textBlock.classList.add('big-slider-hidden');
+            if (index === nowIndex) {
+                element.querySelector('.big-slider__block').classList.remove('big-slider-hidden');
             }
         });
-        
-        const prevIndex = (indexSide - 1 < 0) ? slides.length - 1 : indexSide - 1;
-        const nextIndex = (slides.length <= indexSide + 1) ? 0 : indexSide + 1;
-        
-        if (side === 'left') {
-            slides[prevIndex].classList.remove('travel-slider__right');
-            slides[nextIndex].classList.remove('travel-slider__center');
-            slides[indexSide].classList.remove('travel-slider__left');
-
-            slides[prevIndex].classList.add('travel-slider__left');
-            slides[nextIndex].classList.add('travel-slider__right');
-            slides[indexSide].classList.add('travel-slider__center');
-
-
-            slides[prevIndex].querySelector('.travel-slider__image').classList.remove('travel-slider__image-right');
-            slides[nextIndex].querySelector('.travel-slider__image').classList.remove('travel-slider__image-center');
-            slides[indexSide].querySelector('.travel-slider__image').classList.remove('travel-slider__image-left');
-
-            slides[prevIndex].querySelector('.travel-slider__image').classList.add('travel-slider__image-left');
-            slides[nextIndex].querySelector('.travel-slider__image').classList.add('travel-slider__image-right');
-            slides[indexSide].querySelector('.travel-slider__image').classList.add('travel-slider__image-center');
-
-            slides.forEach( (element, index) => {
-                const textBlock = element.querySelector('.travel-slider__block');
-                textBlock.classList.add('travel-slider-hidden');
-                if (index === indexSide) {
-                    element.querySelector('.travel-slider__block').classList.remove('travel-slider-hidden');
-                }
-            });
-        } else if (side === 'right') {
-            slides[prevIndex].classList.remove('travel-slider__center');
-            slides[nextIndex].classList.remove('travel-slider__left');
-            slides[indexSide].classList.remove('travel-slider__right');
-
-            slides[prevIndex].classList.add('travel-slider__left');
-            slides[nextIndex].classList.add('travel-slider__right');
-            slides[indexSide].classList.add('travel-slider__center');
-
-            slides[prevIndex].querySelector('.travel-slider__image').classList.remove('travel-slider__image-center');
-            slides[nextIndex].querySelector('.travel-slider__image').classList.remove('travel-slider__image-left');
-            slides[indexSide].querySelector('.travel-slider__image').classList.remove('travel-slider__image-right');
-
-            slides[prevIndex].querySelector('.travel-slider__image').classList.add('travel-slider__image-left');
-            slides[nextIndex].querySelector('.travel-slider__image').classList.add('travel-slider__image-right');
-            slides[indexSide].querySelector('.travel-slider__image').classList.add('travel-slider__image-center');
-
-            slides.forEach( (element, index) => {
-                const textBlock = element.querySelector('.travel-slider__block');
-                textBlock.classList.add('travel-slider-hidden');
-                if (index === indexSide) {
-                    element.querySelector('.travel-slider__block').classList.remove('travel-slider-hidden');
-                }
-            });
-        }
     };
+
+    const slideSwitch = (slider) => {
+        let nowIndex;
+        slides.forEach((element, index) => {
+            if (element === slider) {
+                nowIndex = index;
+            }
+        });
+
+        const prevIndex = (nowIndex - 1 < 0) ? slides.length - 1 : nowIndex - 1;
+        const nextIndex = (slides.length <= nowIndex + 1) ? 0 : nowIndex + 1;
+        
+        
+        deletingSlideСlasses();
+        deletingImageСlasses();
+            
+        addSlideСlasses(prevIndex, nextIndex, nowIndex);
+        addImageСlasses(prevIndex, nextIndex, nowIndex);
+        hideText(nowIndex);
+    };
+
+    const autoSwitch = (time = 5000) => {
+        interval = setInterval(() => {
+            const rightSlider = slider.querySelector('.big-slider__right');
+            slideSwitch(rightSlider, 'right');
+        }, time);
+    };
+    autoSwitch(5000);
 
     const mouseСlick = () => {
         slider.addEventListener('click', (event) => {
             const target = event.target;
-            if (target.closest('.travel-slider__image-left')) {
-                slideSwitch(target.closest('.travel-slider__slide'), 'left');
-            } else if (target.closest('.travel-slider__image-right')) {
-                slideSwitch(target.closest('.travel-slider__slide'), 'right');
+            if (target.closest('.big-slider__image-left')) {
+                slideSwitch(target.closest('.big-slider__slide'));
+            } else if (target.closest('.big-slider__image-right')) {
+                slideSwitch(target.closest('.big-slider__slide'));
             } 
         });
     };
     mouseСlick();
+
+    const mouseOver = () => {
+        slider.addEventListener('mouseover', () => {
+            clearInterval(interval);
+        });
+        
+        slider.addEventListener('mouseout', () => {
+            autoSwitch(5000);
+        });
+    };
+    mouseOver();
 }
-slider('.travel-slider', '.travel-slider__slide');
+bigSlider('.program-slider', '.big-slider__slide');
+bigSlider('.travel-slider', '.big-slider__slide');
+
+
+const reviewsSlider = () => {
+    /* Индекс слайда по умолчанию */
+    const rightArrow = document.querySelector('.reviews-slider__right-arrow');
+    const leftArrow = document.querySelector('.reviews-slider__left-arrow');
+    const dots = document.querySelectorAll('.reviews-slider__dot');
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    /* Функция увеличивает индекс на 1, показывает следующй слайд*/
+    function plusSlide() {
+        showSlides(slideIndex += 1);
+    }
+
+    /* Функция уменьшяет индекс на 1, показывает предыдущий слайд*/
+    function minusSlide() {
+        showSlides(slideIndex -= 1);  
+    }
+
+    /* Устанавливает текущий слайд */
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    /* Основная функция сладера */
+    function showSlides(n) {
+        const slides = document.querySelectorAll('.reviews-slider__slide');
+        const dots = document.querySelectorAll('.reviews-slider__dot');
+        if (n > slides.length) {
+            slideIndex = 1;
+        }
+        if (n < 1) {
+            slideIndex = slides.length;
+        }
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (let i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" reviews-slider__active-dot", "");
+        }
+        slides[slideIndex - 1].style.display = "flex";
+        dots[slideIndex - 1].className += " reviews-slider__active-dot";
+    }
+    rightArrow.addEventListener('click', () => {
+        plusSlide();
+    });
+    leftArrow.addEventListener('click', () => {
+        minusSlide();
+    });
+
+    dots.forEach((element, index) => {
+        element.addEventListener('click', () => {
+            currentSlide(index + 1);
+        })
+    });
+};
+reviewsSlider();
