@@ -127,13 +127,13 @@ const reviewsSlider = () => {
             slideIndex = slides.length;
         }
         for (let i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
+            slides[i].style.display = 'none';
         }
         for (let i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" reviews-slider__active-dot", "");
+            dots[i].className = dots[i].className.replace(' reviews-slider__active-dot', '');
         }
-        slides[slideIndex - 1].style.display = "flex";
-        dots[slideIndex - 1].className += " reviews-slider__active-dot";
+        slides[slideIndex - 1].style.display = 'flex';
+        dots[slideIndex - 1].className += ' reviews-slider__active-dot';
     }
     rightArrow.addEventListener('click', () => {
         plusSlide();
@@ -149,3 +149,49 @@ const reviewsSlider = () => {
     });
 };
 reviewsSlider();
+
+let inputСleaning;
+
+const modal = () => {
+    const openBtn = document.querySelectorAll('.open-modal');
+    const modalCall = document.querySelector('.modal-call');
+
+    inputСleaning = (block, time=5000) => {
+        setTimeout(() => {
+            const inputs = block.querySelectorAll('input');
+            inputs.forEach((item) => {
+                item.value = '';
+            });
+        }, time);
+    };
+
+    const closeModal = () => {
+        const closeButtons = document.querySelectorAll('.modal-close');
+        const areaModal = document.querySelectorAll('.modal');
+        areaModal.forEach((item) => {
+            item.addEventListener('click', (event) => {
+                const target = event.target;
+                if (target.classList.contains('modal')) {
+                    item.style.display = 'none';
+                    inputСleaning(item.querySelector('form'));
+                }
+            });
+        });
+        
+        closeButtons.forEach((item) => {
+            item.addEventListener('click', () => {
+                item.closest('.modal').style.display = 'none';
+                inputСleaning(item.querySelector('form'));
+            });
+        });
+
+    };
+    closeModal();
+
+    openBtn.forEach(element => {
+        element.addEventListener('click', () => {
+            modalCall.style.display ='flex';
+        });
+    })
+};
+modal();

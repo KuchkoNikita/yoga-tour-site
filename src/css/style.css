@@ -72,6 +72,20 @@ h1, h2, h3, h4, h5, h6, p {
   font-weight: 700;
 }
 
+.input {
+  border: 1px solid #4b4b4b;
+  width: 300px;
+  height: 50px;
+  padding: 15px;
+  font-size: 15px;
+  border-radius: 10px;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #e28234;
+}
+
 .section {
   padding: 80px 0;
 }
@@ -656,6 +670,10 @@ template {
   display: block;
   margin: 0 auto;
   margin-top: 6.5px;
+}
+
+.hero-social__vk {
+  margin-top: 8px;
 }
 
 .about-yoga {
@@ -1550,5 +1568,66 @@ template {
 
 .program__line {
   margin-bottom: 80px;
+}
+
+.modal-call {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal-call__dialog {
+  position: relative;
+  width: 520px;
+  background-color: #ffffff;
+  padding-bottom: 30px;
+}
+
+.modal-call__header {
+  background-color: #f8f2e4;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 24px;
+  font-family: 'Muller-Medium', sans-serif;
+  font-weight: 700;
+}
+
+.modal-call__close {
+  position: absolute;
+  font-size: 55px;
+  right: 12px;
+  cursor: pointer;
+}
+
+.modal-form__input {
+  display: block;
+  margin: 0 auto;
+  margin-top: 15px;
+  font-size: 16px;
+}
+
+.modal-form__button {
+  display: block;
+  margin: 0 auto;
+  border-color: #e28234;
+  color: #e28234;
+  width: 300px;
+  height: 50px;
+  margin-top: 10px;
+}
+
+.modal-form__button:hover {
+  background-color: #e28234;
+  color: #ffffff;
 }
 /*# sourceMappingURL=style.css.map */
