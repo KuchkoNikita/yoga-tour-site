@@ -36,3 +36,23 @@
             &:hover
                 background-color: $main-color
                 color: $second-text-color
+@media screen and ( max-width: 1200px )
+    .schedule
+        &-list
+            &__item
+                flex-basis: 33%
+@media screen and ( max-width: 768px )
+    .schedule
+        &-list
+            &__item
+                flex-basis: 49%
+@media screen and ( max-width: 569px )
+    .schedule
+        &__line
+            margin-top: 10px
+            margin-bottom: 30px
+        &__title
+            font-size: 26px
+        &-list
+            &__item
+                flex-basis: 100%

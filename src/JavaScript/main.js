@@ -173,7 +173,7 @@ const modal = () => {
                 const target = event.target;
                 if (target.classList.contains('modal')) {
                     item.style.display = 'none';
-                    inputСleaning(item.querySelector('form'));
+                    inputСleaning(item.querySelector('form'), 1);
                 }
             });
         });
@@ -181,7 +181,7 @@ const modal = () => {
         closeButtons.forEach((item) => {
             item.addEventListener('click', () => {
                 item.closest('.modal').style.display = 'none';
-                inputСleaning(item.querySelector('form'));
+                inputСleaning(item.querySelector('form'), 1);
             });
         });
 
@@ -195,3 +195,71 @@ const modal = () => {
     })
 };
 modal();
+
+const sendForm = () => {
+    const errorMessage = 'Что-то пошло не так...';
+    const loadMessage = 'Загрузка...';
+    const successMessage = 'Ваша форма отправлена!';
+
+    const statusMassage = document.createElement('div');
+    statusMassage.style.cssText = `font-size: 18px; color: #00000; margin-top: 10px; text-align: center;`;
+
+    const modalForm = document.querySelector('.modal-form');
+
+    const deleteMessage = (message, time = 5000) => {
+        setTimeout(() => {
+            message.remove();
+        }, time);
+    };
+
+    const closePopupAfterSendForm = (form, time = 5000) => {
+        const modal = form.closest('.modal');
+        setTimeout( () => {
+            modal.style.display = 'none';
+        }, time);
+    };
+
+    const postData = (obj) => {
+        return fetch('./php/server.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(obj),
+        });
+    };
+
+    const messagePost = (form) => {
+        form.addEventListener('submit', (event) => {
+            event.preventDefault();
+            if (form.classList.contains('modal-form')) {
+                form.appendChild(statusMassage);
+                statusMassage.textContent = loadMessage;
+            }
+            
+            let body = {};
+
+            const formData = new FormData(form);
+            formData.forEach( (value, key) => {
+                body[key] = value;
+            });
+            
+            postData(body)
+                .then((response) => {
+                    if (response.status !== 200) {
+                        throw new Error('status network not 200');
+                    }
+                    statusMassage.textContent = successMessage;
+                }) 
+                .catch( (error) => {
+                    statusMassage.textContent = errorMessage;
+                    console.error(error.status);
+                });  
+            inputСleaning(form);
+            deleteMessage(statusMassage);
+            closePopupAfterSendForm(form); 
+        });
+    };
+    messagePost(modalForm);
+};
+sendForm();

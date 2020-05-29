@@ -28,3 +28,46 @@
             margin-left: 21px
             font-size: 18px
             text-transform: uppercase
+@media (max-width: 768px)
+    .about-yoga
+        &-block
+            display: block
+        &__image
+            display: flex
+            justify-content: center
+            margin-right: 0
+        &-text
+            &__title
+                text-align: center
+            &__text
+                max-width: 500px
+                text-align: center
+                margin: 0 auto
+            &__list
+                display: flex
+                justify-content: space-between
+                width: 90%
+                margin: 0 auto
+            &__definition
+                position: static
+                margin-left: 12px
+@media (max-width: 576px)
+    .about-yoga
+        padding: 30px 0
+        &-text
+            margin-top: 30px
+            &__big-title
+                font-size: 40px
+            &__title
+                font-size: 24px
+            &__text
+                font-size: 14px
+            &__definition
+                font-size: 14px
+            &__list
+                justify-content: center
+                flex-direction: column
+            &__item
+                display: block
+                margin: 0 auto
+                margin-top: 10px

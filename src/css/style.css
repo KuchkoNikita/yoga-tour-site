@@ -608,6 +608,15 @@ template {
   margin-bottom: 10px;
 }
 
+@media screen and (max-width: 569px) {
+  .navbar__text {
+    font-size: 12px;
+  }
+  .navbar__phone {
+    font-size: 16px;
+  }
+}
+
 .hero__title {
   margin-top: 180px;
   text-align: center;
@@ -676,6 +685,32 @@ template {
   margin-top: 8px;
 }
 
+@media screen and (max-width: 768px) {
+  .hero__title {
+    font-size: 45px;
+  }
+}
+
+@media screen and (max-width: 569px) {
+  .hero__title {
+    margin-top: 100px;
+    font-size: 25px;
+  }
+  .hero__subtitle {
+    font-size: 12px;
+  }
+  .hero__address {
+    font-size: 12px;
+    margin-bottom: 50px;
+  }
+  .hero__button {
+    font-size: 14px;
+  }
+  .hero-social {
+    margin-top: 50px;
+  }
+}
+
 .about-yoga {
   background-color: #f8f2e4;
   padding: 50px 0;
@@ -729,6 +764,78 @@ template {
   text-transform: uppercase;
 }
 
+@media (max-width: 768px) {
+  .about-yoga-block {
+    display: block;
+  }
+  .about-yoga__image {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-right: 0;
+  }
+  .about-yoga-text__title {
+    text-align: center;
+  }
+  .about-yoga-text__text {
+    max-width: 500px;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .about-yoga-text__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+  }
+  .about-yoga-text__definition {
+    position: static;
+    margin-left: 12px;
+  }
+}
+
+@media (max-width: 576px) {
+  .about-yoga {
+    padding: 30px 0;
+  }
+  .about-yoga-text {
+    margin-top: 30px;
+  }
+  .about-yoga-text__big-title {
+    font-size: 40px;
+  }
+  .about-yoga-text__title {
+    font-size: 24px;
+  }
+  .about-yoga-text__text {
+    font-size: 14px;
+  }
+  .about-yoga-text__definition {
+    font-size: 14px;
+  }
+  .about-yoga-text__list {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .about-yoga-text__item {
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+  }
+}
+
 .causes__title {
   text-align: center;
   font-size: 36px;
@@ -774,6 +881,34 @@ template {
   display: block;
   text-align: center;
   font-size: 16px;
+}
+
+@media screen and (max-width: 768px) {
+  .causes-list {
+    margin-top: 20px;
+  }
+  .causes-list__item {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    margin-top: 45px;
+  }
+}
+
+@media screen and (max-width: 569px) {
+  .causes {
+    padding: 50px 0;
+  }
+  .causes__title {
+    font-size: 26px;
+  }
+  .causes-list {
+    margin-top: 40px;
+  }
+  .causes-list__item {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    margin-top: 45px;
+  }
 }
 
 .schedule__title {
@@ -836,6 +971,34 @@ template {
 .schedule-list__button:hover {
   background-color: #e28234;
   color: #ffffff;
+}
+
+@media screen and (max-width: 1200px) {
+  .schedule-list__item {
+    -ms-flex-preferred-size: 33%;
+        flex-basis: 33%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .schedule-list__item {
+    -ms-flex-preferred-size: 49%;
+        flex-basis: 49%;
+  }
+}
+
+@media screen and (max-width: 569px) {
+  .schedule__line {
+    margin-top: 10px;
+    margin-bottom: 30px;
+  }
+  .schedule__title {
+    font-size: 26px;
+  }
+  .schedule-list__item {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
 }
 
 .ayurveda__title {
@@ -984,6 +1147,100 @@ template {
   width: 200px;
   font-size: 12px;
   color: #454545;
+}
+
+@media screen and (max-width: 1200px) {
+  .ayurveda-center {
+    display: block;
+  }
+  .ayurveda-center__image {
+    display: block;
+    margin: 0 auto;
+  }
+  .ayurveda-text-block {
+    margin-left: 50px;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .ayurveda {
+    padding: 50px 0;
+  }
+  .ayurveda__line {
+    margin-bottom: 40px;
+  }
+  .ayurveda__subtitle {
+    margin-top: 30px;
+  }
+  .ayurveda-center {
+    margin-top: 40px;
+  }
+  .ayurveda-center__item {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
+  .ayurveda-text-block {
+    margin-left: 28px;
+  }
+  .ayurveda-text-block__text {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 569px) {
+  .ayurveda__title {
+    font-size: 32px;
+  }
+  .ayurveda__subtitle {
+    font-size: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .ayurveda__line {
+    margin-bottom: 30px;
+  }
+  .ayurveda__text {
+    font-size: 14px;
+  }
+  .ayurveda-center {
+    margin-top: 30px;
+  }
+  .ayurveda-list__item {
+    display: block;
+  }
+  .ayurveda-list__image {
+    display: block;
+    margin: 0 auto;
+  }
+  .ayurveda-list__text {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    width: 280px;
+    margin-top: 15px;
+    font-size: 14px;
+  }
+  .ayurveda-text-block {
+    margin-left: 0px;
+  }
+  .ayurveda-text-block__title {
+    font-size: 25px;
+  }
+  .ayurveda-text-block__adress {
+    margin-bottom: 25px;
+  }
+  .ayurveda-text-block__column {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
+  .ayurveda-text-block__list {
+    display: block;
+  }
+  .ayurveda-text-block__item {
+    margin-bottom: 8px;
+  }
 }
 
 .instructors {
@@ -1398,7 +1655,7 @@ template {
 .safety__text {
   display: block;
   margin: 0 auto;
-  width: 966px;
+  max-width: 966px;
   text-align: center;
   font-size: 16px;
   font-family: 'Muller-Italic', sans-serif;
@@ -1590,14 +1847,14 @@ template {
   position: relative;
   width: 520px;
   background-color: #ffffff;
-  padding-bottom: 30px;
+  padding-bottom: 80px;
 }
 
 .modal-call__header {
   background-color: #f8f2e4;
   text-align: center;
-  padding: 15px 0;
-  font-size: 24px;
+  padding: 30px 0;
+  font-size: 34px;
   font-family: 'Muller-Medium', sans-serif;
   font-weight: 700;
 }
@@ -1612,8 +1869,9 @@ template {
 .modal-form__input {
   display: block;
   margin: 0 auto;
-  margin-top: 15px;
+  margin-top: 20px;
   font-size: 16px;
+  width: 350px;
 }
 
 .modal-form__button {
@@ -1621,9 +1879,9 @@ template {
   margin: 0 auto;
   border-color: #e28234;
   color: #e28234;
-  width: 300px;
+  width: 350px;
   height: 50px;
-  margin-top: 10px;
+  margin-top: 15px;
 }
 
 .modal-form__button:hover {
