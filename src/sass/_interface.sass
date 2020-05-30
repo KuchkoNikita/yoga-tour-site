@@ -94,6 +94,15 @@ h1, h2, h3, h4, h5, h6, p
         &__image-center
             height: 530px
             width: 940px
+        &__right-arrow
+            display: none
+            position: absolute
+            transform: rotate(180deg)
+            right: 100px
+        &__left-arrow
+            display: none
+            position: absolute
+            left: 100px
 @media screen and ( min-width: 1902px)
     .big
         &-slider
@@ -125,3 +134,51 @@ h1, h2, h3, h4, h5, h6, p
                 left: -35%
             &__right
                 right: -35%
+@media screen and ( max-width: 1380px)
+    .big
+        &-slider
+            &__left
+                display: none
+            &__right
+                display: none
+@media screen and ( max-width: 1100px)
+    .big
+        &-slider
+            &__block
+                left: 20%
+            &__center
+                width: 740px
+                height: 330px
+                overflow: hidden
+
+@media screen and ( max-width: 900px)
+    .big
+        &-slider
+            &__center
+                width: 440px
+                height: 230px
+            &__text
+                width: 360px
+                font-size: 14px
+            &__title
+                font-size: 20px
+            &__block
+                left: 12%
+@media screen and ( max-width: 526px)
+    .big
+        &-slider
+            &__center
+                width: 380px
+            &__block
+                left: 15%
+            &__text
+                width: 270px
+                font-size: 12px
+@media screen and ( max-width: 390px)
+    .big
+        &-slider
+            &__center
+                width: 320px
+                height: 200px
+            &__block
+                left: 10%

@@ -1,0 +1,27 @@
+.footer
+    padding: 12px 0
+    background-color: $bg-footer
+    color: $second-text-color
+    &-block
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &-about
+        display: flex
+        align-items: center
+        &__logo
+            margin-right: 40px
+        &__text
+            font-size: 12px
+        &__website
+            text-decoration: underline
+            font-size: 18px
+            color: $second-text-color
+            +bold
+    &__legal
+        max-width: 560px
+        font-size: 12px
+@media screen and ( max-width: 768px )
+    .footer
+        &-block
+            display: block
