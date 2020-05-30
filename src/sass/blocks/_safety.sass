@@ -30,3 +30,26 @@
             display: block
             text-align: center
             margin-top: 12px
+@media screen and ( max-width: 768px )
+    .safety
+        &-list
+            flex-wrap: wrap
+            &__item
+                margin-top: 20px
+                flex-basis: 50%
+@media screen and ( max-width: 569px )
+    .safety
+        padding: 50px 0
+        &__title
+            font-size: 32px
+        &__line
+            margin-bottom: 40px
+        &__text
+            font-size: 13px
+            margin-bottom: 30px
+        &__subtitle
+            font-size: 18px
+            margin-bottom: 15px
+        &-list
+            &__item
+                flex-basis: 100%

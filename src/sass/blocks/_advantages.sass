@@ -26,3 +26,19 @@
             display: block
             text-align: center
             font-size: 16px
+@media screen and ( max-width: 768px )
+    .advantages
+        &-list
+            &__item
+                flex-basis: 50%
+@media screen and ( max-width: 569px )
+    .advantages
+        padding: 50px 0
+        &__title
+            font-size: 32px
+        &-list
+            &__title
+                margin-top: 15px
+            &__item
+                flex-basis: 100%
+                margin-top: 30px

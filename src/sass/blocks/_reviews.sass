@@ -56,3 +56,61 @@
             right: 50px
             transform: rotate(180deg)
             cursor: pointer
+@media screen and ( max-width: 1200px )
+    .reviews
+        &-slider
+            &__review
+                width: 440px
+            &__image
+                max-width: 120px
+                max-height: 120px
+            &__left-arrow
+                left: 20px
+            &__right-arrow
+                right: 20px
+@media screen and ( max-width: 768px )
+    .reviews
+        &-slider
+            &__review
+                width: 400px
+            &__image
+                display: block
+                max-width: 100px
+                max-height: 100px
+            &__text
+                margin-left: 20px
+            &__left-arrow
+                left: -15px
+            &__right-arrow
+                right: -15px
+            &__dots
+                margin-top: 30px
+@media screen and ( max-width: 569px )
+    .reviews
+        padding: 50px 0
+        &__title
+            font-size: 32px
+        &__line
+            margin-bottom: 40px
+        &-slider
+            &__slide
+                flex-direction: column
+            &__image
+                margin-bottom: 10px
+                max-width: 150px
+                max-height: 150px
+                margin-left: 40px
+            &__text
+                margin-left: 40px
+            &__review
+                width: 320px
+                font-size: 12px
+@media screen and ( max-width: 420px )
+    .reviews
+        &-slider
+            &__image
+                margin-left: 20px
+            &__text
+                margin-left: 20px
+            &__review
+                width: 280px

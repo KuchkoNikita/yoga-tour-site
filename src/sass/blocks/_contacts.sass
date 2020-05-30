@@ -57,3 +57,31 @@
             +bold
             color: $text-color
         &__image
+@media screen and ( max-width: 768px )
+    .contacts
+        &-social
+            &__title
+                font-size: 15px
+        &-phone
+            &__title
+                font-size: 15px
+            &__desription
+                font-size: 11px
+            &__phone
+                font-size: 24px
+        &-office
+            &__text
+                width: 160px
+@media screen and ( max-width: 569px )
+    .contacts
+        &-list
+            flex-direction: column
+        &-phone
+            margin-top: 20px
+        &-office
+            &__list
+                flex-direction: column
+            &__item
+                margin-top: 20px
+            &__text
+                margin-top: 7px

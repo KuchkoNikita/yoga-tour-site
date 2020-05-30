@@ -1247,6 +1247,47 @@ template {
   background-color: #f8f2e4;
 }
 
+.instructors-mobile {
+  display: none;
+}
+
+.instructors-mobile__item {
+  margin-top: 20px;
+}
+
+.instructors-mobile__text {
+  text-align: center;
+  margin: 10px 0;
+}
+
+.instructors-mobile__image {
+  width: 270px;
+  height: 200px;
+  border-radius: 10%;
+  background-size: cover;
+  display: block;
+  margin: 0 auto;
+}
+
+.instructors-mobile__name {
+  font-size: 20px;
+  font-family: 'Muller-Medium', sans-serif;
+  font-weight: 700;
+}
+
+.instructors-mobile__specialty {
+  color: #4e4e4e;
+  font-size: 14px;
+  display: block;
+  margin: 5px 0;
+}
+
+.instructors-mobile__about {
+  margin: 0 auto;
+  font-size: 15px;
+  width: 290px;
+}
+
 .instructors__title {
   font-size: 36px;
   text-align: center;
@@ -1329,6 +1370,70 @@ template {
 .instructors-people-man {
   margin-top: 20px;
   background-image: url("../img/instructors/man.jpg");
+}
+
+@media screen and (max-width: 1200px) {
+  .instructors-people-women, .instructors-people-man {
+    width: 640px;
+    height: 340px;
+  }
+  .instructors-people__title {
+    margin-right: 20px;
+    margin-left: 10px;
+  }
+  .instructors-people__about::before {
+    margin-right: 30px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .instructors-people-women, .instructors-people-man {
+    width: 520px;
+    height: 300px;
+  }
+  .instructors-people__text {
+    min-height: 120px;
+  }
+  .instructors-people__name {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  .instructors-people__specialty {
+    font-size: 12px;
+  }
+  .instructors-people__title {
+    margin-right: 10px;
+  }
+  .instructors-people__about {
+    font-size: 12px;
+  }
+  .instructors-people__about::before {
+    margin-right: 15px;
+  }
+  .instructors-people-women {
+    background-position-x: -150px;
+  }
+  .instructors-people-man {
+    background-position-x: -120px;
+  }
+}
+
+@media screen and (max-width: 569px) {
+  .instructors {
+    padding: 50px 0;
+  }
+  .instructors-people-women, .instructors-people-man {
+    display: none;
+  }
+  .instructors-mobile {
+    display: block;
+  }
+  .instructors__line {
+    margin-bottom: 40px;
+  }
+  .instructors__title {
+    font-size: 32px;
+  }
 }
 
 .reviews__title {
@@ -1430,6 +1535,88 @@ template {
   cursor: pointer;
 }
 
+@media screen and (max-width: 1200px) {
+  .reviews-slider__review {
+    width: 440px;
+  }
+  .reviews-slider__image {
+    max-width: 120px;
+    max-height: 120px;
+  }
+  .reviews-slider__left-arrow {
+    left: 20px;
+  }
+  .reviews-slider__right-arrow {
+    right: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .reviews-slider__review {
+    width: 400px;
+  }
+  .reviews-slider__image {
+    display: block;
+    max-width: 100px;
+    max-height: 100px;
+  }
+  .reviews-slider__text {
+    margin-left: 20px;
+  }
+  .reviews-slider__left-arrow {
+    left: -15px;
+  }
+  .reviews-slider__right-arrow {
+    right: -15px;
+  }
+  .reviews-slider__dots {
+    margin-top: 30px;
+  }
+}
+
+@media screen and (max-width: 569px) {
+  .reviews {
+    padding: 50px 0;
+  }
+  .reviews__title {
+    font-size: 32px;
+  }
+  .reviews__line {
+    margin-bottom: 40px;
+  }
+  .reviews-slider__slide {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .reviews-slider__image {
+    margin-bottom: 10px;
+    max-width: 150px;
+    max-height: 150px;
+    margin-left: 40px;
+  }
+  .reviews-slider__text {
+    margin-left: 40px;
+  }
+  .reviews-slider__review {
+    width: 320px;
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .reviews-slider__image {
+    margin-left: 20px;
+  }
+  .reviews-slider__text {
+    margin-left: 20px;
+  }
+  .reviews-slider__review {
+    width: 280px;
+  }
+}
+
 .advantages {
   background-color: #f8f2e4;
 }
@@ -1478,6 +1665,30 @@ template {
   display: block;
   text-align: center;
   font-size: 16px;
+}
+
+@media screen and (max-width: 768px) {
+  .advantages-list__item {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
+}
+
+@media screen and (max-width: 569px) {
+  .advantages {
+    padding: 50px 0;
+  }
+  .advantages__title {
+    font-size: 32px;
+  }
+  .advantages-list__title {
+    margin-top: 15px;
+  }
+  .advantages-list__item {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    margin-top: 30px;
+  }
 }
 
 .work__title {
@@ -1534,6 +1745,51 @@ template {
   color: #ea7231;
 }
 
+@media screen and (max-width: 1200px) {
+  .work-list {
+    margin-top: 40px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .work-list__arrow {
+    display: none;
+  }
+  .work-list__item {
+    margin-top: 15px;
+    -ms-flex-preferred-size: 33%;
+        flex-basis: 33%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .work-list {
+    margin-top: 10px;
+  }
+  .work-list__item {
+    margin-top: 25px;
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
+}
+
+@media screen and (max-width: 569px) {
+  .work {
+    padding: 50px 0;
+  }
+  .work__line {
+    margin-top: 20px;
+  }
+  .work__title {
+    font-size: 32px;
+  }
+  .work-list__item {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+}
+
 .coast {
   background-color: #f8f2e4;
 }
@@ -1579,6 +1835,10 @@ template {
 
 .coast-tours__coast {
   font-size: 20px;
+}
+
+.coast-tours__coast-modile {
+  display: none;
 }
 
 .coast-tours__special {
@@ -1640,6 +1900,118 @@ template {
   margin-top: 48px;
 }
 
+@media screen and (max-width: 1200px) {
+  .coast-tours {
+    width: 720px;
+  }
+  .coast-tours__usual {
+    padding: 30px;
+  }
+  .coast-tours__special {
+    padding: 20px 30px;
+  }
+  .coast-tours__text {
+    font-size: 18px;
+  }
+  .coast-tours__coast {
+    font-size: 17px;
+  }
+  .coast-tours__sentence {
+    font-size: 18px;
+  }
+  .coast-tours__button {
+    padding: 15px 35px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .coast-tours {
+    width: 540px;
+  }
+  .coast-tours__usual {
+    padding: 10px;
+  }
+  .coast-tours__special {
+    padding: 10px 10px;
+  }
+  .coast-tours__text {
+    font-size: 14px;
+  }
+  .coast-tours__coast {
+    font-size: 13px;
+  }
+  .coast-tours__sentence {
+    font-size: 14px;
+  }
+  .coast-tours__button {
+    padding: 10px 30px;
+    font-size: 13px;
+  }
+  .coast-list__item {
+    width: 540px;
+  }
+  .coast-list__text {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 569px) {
+  .coast {
+    padding: 50px 0;
+  }
+  .coast__line {
+    margin-bottom: 25px;
+  }
+  .coast__title {
+    font-size: 32px;
+    margin-bottom: 15px;
+  }
+  .coast-tours {
+    width: 300px;
+  }
+  .coast-tours__usual {
+    padding: 10px;
+  }
+  .coast-tours__special {
+    padding: 10px 10px;
+  }
+  .coast-tours__text {
+    width: 220px;
+    font-size: 14px;
+  }
+  .coast-tours__coast {
+    font-size: 13px;
+    display: none;
+  }
+  .coast-tours__coast-modile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .coast-tours__sentence {
+    font-size: 14px;
+  }
+  .coast-tours__button {
+    padding: 10px 30px;
+    font-size: 13px;
+  }
+  .coast__subtitle {
+    font-size: 18px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+  .coast__warning {
+    font-size: 14px;
+    margin-top: 28px;
+  }
+  .coast-list__item {
+    max-width: 310px;
+  }
+}
+
 .safety__title {
   font-size: 36px;
   font-family: 'Muller-Medium', sans-serif;
@@ -1689,6 +2061,42 @@ template {
   display: block;
   text-align: center;
   margin-top: 12px;
+}
+
+@media screen and (max-width: 768px) {
+  .safety-list {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .safety-list__item {
+    margin-top: 20px;
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
+}
+
+@media screen and (max-width: 569px) {
+  .safety {
+    padding: 50px 0;
+  }
+  .safety__title {
+    font-size: 32px;
+  }
+  .safety__line {
+    margin-bottom: 40px;
+  }
+  .safety__text {
+    font-size: 13px;
+    margin-bottom: 30px;
+  }
+  .safety__subtitle {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+  .safety-list__item {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
 }
 
 .contacts {
@@ -1792,6 +2200,48 @@ template {
   font-family: 'Muller-Medium', sans-serif;
   font-weight: 700;
   color: #000000;
+}
+
+@media screen and (max-width: 768px) {
+  .contacts-social__title {
+    font-size: 15px;
+  }
+  .contacts-phone__title {
+    font-size: 15px;
+  }
+  .contacts-phone__desription {
+    font-size: 11px;
+  }
+  .contacts-phone__phone {
+    font-size: 24px;
+  }
+  .contacts-office__text {
+    width: 160px;
+  }
+}
+
+@media screen and (max-width: 569px) {
+  .contacts-list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .contacts-phone {
+    margin-top: 20px;
+  }
+  .contacts-office__list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .contacts-office__item {
+    margin-top: 20px;
+  }
+  .contacts-office__text {
+    margin-top: 7px;
+  }
 }
 
 .travel {

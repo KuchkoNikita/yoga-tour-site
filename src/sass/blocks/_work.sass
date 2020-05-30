@@ -47,3 +47,32 @@
             text-align: center
             text-decoration: underline
             color: $link-work
+@media screen and ( max-width: 1200px )
+    .work
+        &-list
+            margin-top: 40px
+            flex-wrap: wrap
+            justify-content: space-around
+            &__arrow
+                display: none
+            &__item
+                margin-top: 15px
+                flex-basis: 33%
+@media screen and ( max-width: 768px )
+    .work
+        &__line
+        &-list
+            margin-top: 10px
+            &__item
+                margin-top: 25px
+                flex-basis: 50%
+@media screen and ( max-width: 569px )
+    .work
+        padding: 50px 0
+        &__line
+            margin-top: 20px
+        &__title
+            font-size: 32px
+        &-list
+            &__item
+                flex-basis: 100%

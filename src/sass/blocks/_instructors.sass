@@ -1,5 +1,31 @@
 .instructors
     background-color: $bg-color
+    &-mobile
+        display: none
+        &__item
+            margin-top: 20px    
+        &__text
+            text-align: center
+            margin: 10px 0
+        &__image
+            width: 270px
+            height: 200px
+            border-radius: 10% 
+            background-size: cover
+            display: block
+            margin: 0 auto
+        &__name
+            font-size: 20px
+            +bold
+        &__specialty
+            color: $coast-text-color
+            font-size: 14px
+            display: block
+            margin: 5px 0
+        &__about
+            margin: 0 auto
+            font-size: 15px
+            width: 290px
     &__title
         font-size: 36px
         text-align: center
@@ -53,4 +79,50 @@
         &-man
             margin-top: 20px
             background-image: url('../img/instructors/man.jpg')
-
+@media screen and ( max-width: 1200px )
+    .instructors
+            &-people
+                &-women, &-man
+                    width: 640px
+                    height: 340px
+                &__title
+                    margin-right: 20px
+                    margin-left: 10px
+                &__about
+                    &::before 
+                        margin-right: 30px
+@media screen and ( max-width: 768px )
+    .instructors
+            &-people
+                &-women, &-man
+                    width: 520px
+                    height: 300px
+                &__text
+                    min-height: 120px
+                &__name
+                    font-size: 20px
+                    margin-bottom: 10px
+                &__specialty
+                    font-size: 12px
+                &__title
+                    margin-right: 10px
+                &__about
+                    font-size: 12px
+                    &::before 
+                        margin-right: 15px
+                &-women
+                    background-position-x: -150px
+                &-man
+                    background-position-x: -120px
+@media screen and ( max-width: 569px )
+    .instructors
+        padding: 50px 0
+        &-people
+            &-women, &-man
+                display: none
+        &-mobile
+            display: block
+        &__line
+            margin-bottom: 40px
+        &__title
+            font-size: 32px
