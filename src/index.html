@@ -897,8 +897,8 @@
             <h3 class="modal-call__header">Заказать звонок</h3>
             <!-- /.modal-call__header -->
             <form action="#" class="modal-form form">
-                <input type="text" name="username" class="input modal-form__input" placeholder="Ваше имя">
-                <input type="tel" name="phone" class="input modal-form__input" placeholder="Ваш телефон">
+                <input type="text" name="username" class="input modal-form__input" placeholder="Ваше имя" required pattern = "^[а-яА-ЯёЁ ?]+$">
+                <input type="tel" name="phone" class="input modal-form__input" placeholder="Ваш телефон" required pattern = "^\+375( )?(( )?\d){9}$|^\+?[78]([-()]*\d){10}$">
                 <button class="button modal-form__button">Отправить</button>
                 <div class="form-status modal-form__status"></div>
             </form>
